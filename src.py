@@ -7,12 +7,16 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-from datset.qa_data import ml_qa_data
 import re
 
 
-# In[247]:
 
+# In[247]:
+import sys
+import os
+
+sys.path.append(os.path.abspath(__file__))
+from dataset.qa_data import ml_qa_data
 
 questions = list(ml_qa_data.keys())
 
